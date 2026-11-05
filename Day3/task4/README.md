@@ -16,7 +16,7 @@ ros2 launch turtle_adv follow.launch.py 한 번으로 노드 4개(/sim, /broadca
 [Screencast from 2026-11-05 14-19-27.webm](https://github.com/user-attachments/assets/d5c964d0-b041-4f27-841d-6e66fca02cad)
 
 ---------------------------------------------------
-view_frames로 확인한 TF 트리에서는 turtle1과 turtle2의 부모가 모두 world였고, 둘 다 약 62.7 Hz로 발행되고 있었다. 거북이 위치가 계속 바뀌기 때문에 계속 발행되는 dynamic TF임을 확인할 수 있었다.
+view_frames로 확인한 TF 트리에서는 turtle1과 turtle2의 부모가 모두 world였고(ppt자료와 같음), 둘 다 약 62.7 Hz로 발행되고 있었다. 거북이 위치가 계속 바뀌기 때문에 계속 발행되는 dynamic TF임을 확인할 수 있었다.
 
 <img width="3438" height="1688" alt="Screenshot from 2026-11-05 14-22-13" src="https://github.com/user-attachments/assets/eff4228f-e9bc-43a9-925d-677f7314729f" />
 
