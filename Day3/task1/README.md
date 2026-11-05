@@ -6,7 +6,10 @@ static TF와 dynamic TF는 값이 바귀는지, 바뀌지 않는지에 따라 �
 
 ## 1-1. 공식 데모
 [Screencast from 2026-11-04 21-32-47.webm](https://github.com/user-attachments/assets/c0db1906-4fb0-46d0-8170-f32e0c3d22e6)
+
 조종하는 거북이를 따라가는 것을 볼 수 있다. 
 
 ## 1-2. 직접 만든 노드
 [Screencast from 2026-11-04 21-52-33.webm](https://github.com/user-attachments/assets/ea1c7673-27aa-4ede-8738-9659f08b6d07)
+
+world → turtle1 좌표변환이 되고, Dynamic TF가 만들어지고 사용되어 거북이가 움직이는 것을 볼 수 있다.
