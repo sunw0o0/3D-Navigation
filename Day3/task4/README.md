@@ -83,3 +83,5 @@ ros2 param get /turtle_follower k_ang으로 확인하자 YAML에 적은 값인 4
 rotator로 turtle1을 제자리에서 회전시키는 동안에도 turtle2는 멈추지 않고 turtle1의 위치를 향해 계속 이동하였다. 액션, TF 발행, 따라가기가 서로 방해하지 않고 동시에 동작한다는 것을 확인할 수 있었다. 단, turtle_follower는 turtle1의 위치만 따라가고 방향은 따라 하지 않기 때문에, 두 거북이가 이미 붙어 있을 때는 turtle1이 회전해도 turtle2에 눈에 띄는 변화가 없었다.
 
 [Screencast from 2026-11-05 14-44-36.webm](https://github.com/user-attachments/assets/cef45f71-0f73-42c0-8d4a-0ff043943923)
+
+영상이 좀 안예쁘게 나왔지만, 결과는 똑같다
