@@ -1,6 +1,57 @@
 ## 여기서 한 것
 과제 1,2,3을 합치기
 
+## launch 파일 코드
+
+```python
+import os
+
+from ament_index_python.packages import get_package_share_directory
+from launch import LaunchDescription
+from launch_ros.actions import Node
+
+
+def generate_launch_description():
+    # 1단계에서 만든 yaml 파일 위치
+    config = os.path.join(
+        get_package_share_directory('turtle_adv'), 'config', 'follow_params.yaml')
+
+    return LaunchDescription([
+        # (1) 거북이 창
+        Node(
+            package='turtlesim',
+            executable='turtlesim_node',
+            name='sim',
+        ),
+
+        # (2) turtle1 위치를 TF로 발행
+        Node(
+            package='turtle_adv',
+            executable='pose_broadcaster',
+            name='broadcaster1',
+            parameters=[{'turtlename': 'turtle1'}],
+        ),
+
+        # (3) turtle2 위치를 TF로 발행
+        Node(
+            package='turtle_adv',
+            executable='pose_broadcaster',
+            name='broadcaster2',
+            parameters=[{'turtlename': 'turtle2'}],
+        ),
+
+        # (4) turtle2가 turtle1을 따라가게 하기
+        Node(
+            package='turtle_adv',
+            executable='turtle_follower',
+            name='turtle_follower',
+            parameters=[config],
+        ),
+    ])
+```
+노드 4개를 실행하는 것은 리드미에 나온 정답 코드와 같다. 
+얌 파일을 찾을 때, 정답같은 경우에는 A,B둘 다 굴러가야하므로 런치 파일이 있는 폴더 근처?에서 얌파일을 찾지만, 내 파일은 패키지에 넣고 빌드해서만 실행하니 설치 폴더에서 찾아도 충분하다. 정답처럼하면 A,B 둘 다 굴러가고 만약 못찾아도 기본값으로 실행되어 더 포괄적인 것 처럼 보인다. 근데 하다보니 다른 방법이 있어 그냥 해봤다.
+
 ## YAML 파라미터
 YAML 파일의 맨 위에는 노드 이름인 turtle_follower를 적어서, 이 값들이 turtle_follower 노드에만 적용되게 하였다. 이때 YAML에 적은 노드 이름과 launch 파일의 name이 다르면 값이 적용되지 않고 기본값이 쓰이기 때문에, 둘을 똑같이 맞춰야 했다.
 
