@@ -1,0 +1,4 @@
+# Launch란?
+지금까지는 노드 하나를 실행할 때마다 터미널을 하나씩 열고 ros2 run을 입력해야 했다. 노드가 많아지면 터미널도 그만큼 늘어나고, 매번 파라미터와 이름을 똑같이 입력해야 해서 번거롭고 실수하기 쉽다. Launch 파일은 이런 문제를 해결하기 위해 실행할 노드들과 그 설정을 파일 하나에 적어 두고, 명령 한 번으로 모두 실행할 수 있게 해 준다.
+
+<img width="1928" height="2164" alt="Screenshot from 2026-11-04 22-10-27" src="https://github.com/user-attachments/assets/4e48f785-9e7e-4f4b-b897-3ffca1b56e7b" />
